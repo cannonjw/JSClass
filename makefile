@@ -1,8 +1,14 @@
 all:	www
 
-www:	index.html
-	cp *.css ~/www/css
-	cp *.js ~/www/scripts
+scripts: 
+	cp scripts/*.js ~/www/scripts
+
+css: 
+	cpp css/*.css ~/www/css
+
+html: 
 	cp *.html ~/www
+
+www:	scripts css html
 
 clean:
